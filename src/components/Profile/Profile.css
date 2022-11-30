@@ -1,0 +1,14 @@
+.MainBG {
+  width: 1100px;
+  height: 200px;
+  display: block;
+}
+.profile_info{
+  padding-bottom: 25px;
+}
+.profile_wrapper{
+  padding-left: 25px;
+}
+.post_wrapper{
+  padding-top: 15px;
+}
