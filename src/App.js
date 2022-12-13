@@ -8,7 +8,9 @@ import News from './components/News/News';
 import Community from './components/Community/Community';
 import Settings from './components/Settings-/Settings';
 import {Route, Routes,BrowserRouter} from 'react-router-dom';
-const  App = () =>  {
+const  App = (props) =>  {
+  
+
   return (
       <BrowserRouter>
         <div className='app-wrapper'>
@@ -16,8 +18,10 @@ const  App = () =>  {
         <Navbar/>
         <div className='app-wrapper-content'>
           <Routes>
-            <Route path='/profile' element={<Profile />}/>
-            <Route path='/dialogs' element={<Dialogs />}/>
+            <Route path='/profile' element={<Profile postsData= {props.postsData} />}/>
+            <Route path='/dialogs' element={<Dialogs dialogsData = {props.dialogsData}
+                                                     messagesData = {props.messagesData} 
+            />}/>
             <Route path='/news' element={<News />}/>
             <Route path='/community' element={<Community/>}/>
             <Route path='/profile' element={<Settings/>}/>

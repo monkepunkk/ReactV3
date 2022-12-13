@@ -1,6 +1,7 @@
 import  './MyPosts.css';
 import Post from './Post/Post'
-const MyPosts = () => {
+const MyPosts = (props) => {
+    let postsElements = props.postsData.map(p => <Post message = {p.message} likes = {p.likes}/>)
     return (
         <div>
             <div>
@@ -8,8 +9,7 @@ const MyPosts = () => {
             </div>
             <button>Send</button>
             <div className='post_wrapper'>
-                <Post message = 'Alo ebat!' />
-                <Post message = 'Eto kto?'/>
+                {postsElements}
             </div>
 
 

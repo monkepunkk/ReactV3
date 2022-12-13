@@ -1,7 +1,8 @@
 import MyPosts from './MyPosts/MyPosts';
 import Post from './MyPosts/Post/Post';
 import './Profile.css';
-const Profile = () => {
+const Profile = (props) => {
+    
     return (
         <div>
             <div>
@@ -9,7 +10,7 @@ const Profile = () => {
             </div>
             <div className='profile_wrapper'>
                 <div className='profile_info'>ava + Description </div>
-                <MyPosts/>
+                <MyPosts postsData= {props.postsData}/>
             </div>
         </div>
     )
